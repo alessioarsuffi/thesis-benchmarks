@@ -13,6 +13,6 @@ uint64_t fib_iterative(int n) {
 }
 
 int main() {
-    fib_iterative(30);
+    fib_iterative(300);
     return 0;
 }
