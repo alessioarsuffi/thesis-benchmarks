@@ -1,22 +1,18 @@
-#include <iostream>
+#include <stdint.h>
 
-int fibHelper(int n, int prev2, int prev1) {
-    if (n == 0) {
-        return prev2;
-    }
-
-    if (n == 1) {
-        return prev1;
-    }
+uint64_t fib_iterative(int n) {
+    if (n <= 1) return n;
     
-    return fibHelper(n - 1, prev1, prev2 + prev1);
-}
-
-int fib(int n) {
-    return fibHelper(n, 0, 1);
+    uint64_t a = 0, b = 1, temp;
+    for (int i = 2; i <= n; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+    }
+    return b;
 }
 
 int main() {
-    fib(300);
+    fib_iterative(30);
     return 0;
 }

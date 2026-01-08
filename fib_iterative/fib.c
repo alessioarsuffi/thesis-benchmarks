@@ -1,41 +1,18 @@
-#include <stdio.h>
+#include <stdint.h>
 
-// Recursive function to print the fibonacci series
-void fib(int n, int prev1, int prev2) {
-    // Base Case: when n gets less than 3
-    if (n < 3) {
-        return;
-    }
+uint64_t fib_iterative(int n) {
+    if (n <= 1) return n;
     
-    int curr = prev1 + prev2;
-    printf("%d ", curr);
-  
-    return fib(n - 1, prev2, curr);
-}
-
-// Function that handles the first two terms and calls the recursive function
-void printFib(int n) {
-    // When the number of terms is less than 1
-    if (n < 1) {
-        printf("Invalid number of terms\n");
+    uint64_t a = 0, b = 1, temp;
+    for (int i = 2; i <= n; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
     }
-    // When the number of terms is 1
-    else if (n == 1) {
-        printf("%d ", 0);
-    }
-    // When the number of terms is 2
-    else if (n == 2) {
-        printf("%d %d", 0, 1);
-    }
-    // When number of terms greater than 2
-    else {
-        printf("%d %d ", 0, 1);
-        fib(n, 0, 1);
-    }
-    return;
+    return b;
 }
 
 int main() {
-    printFib(300);
+    fib_iterative(30);
     return 0;
 }

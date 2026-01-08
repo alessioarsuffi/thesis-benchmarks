@@ -17,5 +17,5 @@ fn fib_iterative(n: i32) -> u64 {
 }
 
 fn main() {
-    fib_iterative(300);
+    fib_iterative(30);
 }
