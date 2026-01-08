@@ -6,5 +6,5 @@ fn fibonacci(n: i32) -> i32 {
 }
 
 fn main() {
-    fibonacci(30);
+    fibonacci(40);
 }

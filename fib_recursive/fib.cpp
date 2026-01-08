@@ -6,6 +6,6 @@ int fibonacci(int n) {
 }
 
 int main() {
-    volatile int result = fibonacci(30);
+    volatile int result = fibonacci(40);
     return 0;
 }
