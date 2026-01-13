@@ -1,0 +1,2 @@
+numeri.txt filter=lfs diff=lfs merge=lfs -text
+numeri_float.txt filter=lfs diff=lfs merge=lfs -text
