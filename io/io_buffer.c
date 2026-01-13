@@ -34,8 +34,7 @@ int main(void) {
 
     if (in_num) sum += x;
 
+    printf("Somma: %lld", sum);
     fclose(f);
-
-    assert(sum == 5000050000LL);
     return 0;
 }

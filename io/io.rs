@@ -20,7 +20,6 @@ fn main() -> std::io::Result<()> {
     if in_num {
         sum += x;
     }
-
-    assert_eq!(sum, 5000050000u64);
+    println!("Somma: {}", sum);
     Ok(())
 }

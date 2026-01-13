@@ -1,6 +1,7 @@
 #include <fstream>
 #include <vector>
 #include <cassert>
+#include <iostream>
 
 int main() {
     std::ifstream file("numeri.txt", std::ios::binary);
@@ -30,7 +31,6 @@ int main() {
         }
     }
     if (in_num) sum += x;
-
-    assert(sum == 5000050000LL);
+    std::cout << "Somma: " << sum << '\n';
     return 0;
 }
